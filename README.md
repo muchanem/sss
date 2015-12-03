@@ -9,7 +9,7 @@ As of now, S3 will send an email to TAs with priotity, software and discription 
 What Is planned to happen next release
 * Whitman is now modualifying the whole thing so that the main.go is only ~30 lines
 * Whitman is slacking(?) mr. rob to get some input and his brilliant feature-of-the-week
-* Donovank is an ass making a UUID Gen for the tickets
+* Donovank is making a UUID Gen for the tickets
 
 ##What's next:
 There is no way this is complete. But we can improve it in many ways, here's a list:
@@ -22,7 +22,7 @@ There is no way this is complete. But we can improve it in many ways, here's a l
 * Message to Mr. Rob if there's an urgent ticket.
 * Make the skilstakticketer password not in plain sight and plaintext.
 * Find a way to prevent "silly" tickets (*cough* donovank *cough*)
-* Find a way to prevent TAs being arses.
+* Find a way to prevent TAs being jerks.
 * Sort gMail inbox
 
 ##Running the program
