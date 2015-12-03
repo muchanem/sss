@@ -1,0 +1,2 @@
+export GOPATH=$HOME/repos/sss
+export PATH=$HOME/repos/sss/bin:$PATH

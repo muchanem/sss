@@ -13,7 +13,7 @@ import (
 
 func main() {
 	fmt.Println(c.CL)
-	fmt.Println(c.B3, "Support By Tickets by @whitman-colm & @donovank", c.V, "V β2.1.0")
+	fmt.Println(c.B3, "SkilStak Script Support by @whitman-colm & @donovank", c.V, "V S-1.0.0")
 	fmt.Println(c.B2 + "Hey there, need some help?")
 	s.Spacer(3)
 	fmt.Println(c.G + "Select one of the keywords in red")
@@ -53,7 +53,7 @@ func main() {
 	done = false
 	//done has been defined before, reset here.
 	for done == false {
-		//Sorry about this, I will extend this later
+		//Sorry about the unnesisary, switch statment, It's for V 2 will extend this later
 		switch priority {
 		case "low", "medium", "high", "urgent":
 			fmt.Println(c.CL + c.B2 + "No shame in needing help. \nBut please fill this out and people will be able to help ASAP!")
