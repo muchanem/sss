@@ -11,7 +11,7 @@ import (
 
 func Startup() {
 	fmt.Println(c.CL)
-	fmt.Println(c.B3, "Support By Ticket sss module by @whitman-colm & @donovank", c.V, "V 1.0.0")
+	fmt.Println(c.B3+"Support By Ticket sss module by @whitman-colm & @donovank", c.V, "V 1.0.0")
 	done := false
 	/////declaring username
 	fmt.Println(c.CL + c.B2 + "No shame in needing help. \nBut please fill this out and people will be able to help ASAP!")
@@ -94,7 +94,7 @@ func nonUrgent(user string) {
 	err := smtp.SendMail("smtp.gmail.com:587", auth, "skilstakticketer@gmail.com", to, msg)
 	s.QuitAtError(err)
 	s.Go(0)
-	fmt.Println(c.B3 + "Sent! Help is on it's way!")
+	fmt.Println(c.B3 + "Sent! Help is on its way!")
 	done = true
 }
 
