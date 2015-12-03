@@ -11,16 +11,17 @@ As of now, S3 will send an email to TAs with priotity, software and discription 
 
 ##What's next:
 There is no way this is complete. But we can improve it in many ways, here's a list:
-* Make the email bot a module to cut down on shitty complex 200 line files
+* ~~Make the email bot a module to cut down on shitty complex 200 line files~~ Currently being worked on!
 * Give a link to the source code here.
 * Make the whole thing more graphicly appealing.
 * Make the program feel less "Whitman stiff"
-* ~~UUID Generator so TAs can look back at whats done.~~
+* ~~UUID Generator so TAs can look back at whats done.~~ Currently being worked on!
 * FAQ to curb the inevitable influx of tickets with answers for common troubles.
 * Message to Mr. Rob if there's an urgent ticket.
 * Make the skilstakticketer password not in plain sight and plaintext.
 * Find a way to prevent "silly" tickets *cough* donovank *cough*
 * Find a way to prevent TAs being arses.
+* Sort gMail inbox
 
 ##Running the program
 When it launches, s3 can be called with sss for the stable version or ssse for the experimental version.
