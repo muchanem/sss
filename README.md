@@ -6,7 +6,7 @@ SkilStak Script Support is a help desk for SkilStak by @whitman-colm on github a
 As of now, S3 will send an email to TAs with priotity, software and discription of the problem. S3 is also it's own repo.
 
 ##What's happening now:
-What Is planned to happen next reliece
+What Is planned to happen next release
 * Whitman is now modualifying the whole thing so that the main.go is only ~30 lines
 * Whitman is slacking(?) mr. rob to get some input and his brilliant feature-of-the-week
 * Donovank is an ass making a UUID Gen for the tickets
