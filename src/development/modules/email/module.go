@@ -28,7 +28,7 @@ func Startup() {
 	fmt.Println(c.R + "High")
 	fmt.Println(c.V + "Urgent")
 	priority, _ := i.Prompt(c.B + ">" + c.M)
-	////
+	/////
 	priority = strings.ToLower(priority)
 	for done == false {
 		switch priority {
