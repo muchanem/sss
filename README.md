@@ -1,0 +1,26 @@
+# sss
+SkilStak Script Support is a help desk for SkilStak by @whitman-colm on github and @donovank on github.
+
+
+##The Story so far:
+As of now, S3 will send an email to TAs with priotity, software and discription of the problem. S3 is also it's own repo.
+
+##What's happening now:
+* Whitman is on his ass making a readme
+* Donovank is an ass making a UUID Gen for the tickets
+
+##What's next:
+There is no way this is complete. But we can improve it in many ways, here's a list:
+* Make the email bot a module to cut down on shitty complex 200 line files
+* Give a link to the source code here.
+* Make the whole thing more graphicly appealing.
+* Make the program feel less "Whitman stiff"
+* ~~UUID Generator so TAs can look back at whats done.~~
+* FAQ to curb the inevitable influx of tickets with answers for common troubles.
+* Message to Mr. Rob if there's an urgent ticket.
+* Make the skilstakticketer password not in plain sight and plaintext.
+* Find a way to prevent "silly" tickets *cough* donovank *cough*
+* Find a way to prevent TAs being arses.
+
+##Running the program
+When it launches, s3 can be called with sss for the stable version or ssse for the experimental version.
