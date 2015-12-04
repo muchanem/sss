@@ -7,13 +7,13 @@ As of now, S3 will send an email to TAs with priotity, software and discription 
 
 ##What's happening now:
 What Is planned to happen next release
-* Whitman is now modualifying the whole thing so that the main.go is only ~30 lines
-* Whitman is slacking(?) mr. rob to get some input and his brilliant feature-of-the-week
+* Whitman is now bashing his head against the computer in the hopes he fixes the $GOPATH
+* Whitman is slacking(?) mr. rob to get some input and his brilliant feature-of-the-week (If you don't like it, it's ok, he'll change it net week)
 * Donovank is making a UUID Gen for the tickets
 
 ##What's next:
 There is no way this is complete. But we can improve it in many ways, here's a list:
-* ~~Make the email bot a module to cut down on shitty complex 200 line files~~ **Currently being worked on!**
+* ~~Fix $GOPATH env variables.~~ **Currently being worked on**
 * Give a link to the source code here.
 * Make the whole thing more graphicly appealing.
 * Make the program feel less "Whitman stiff"
