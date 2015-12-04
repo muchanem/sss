@@ -11,8 +11,11 @@ import (
 )
 
 func main() {
-	fmt.Println(c.CL+c.B3+"SkilStak Support System", c.V, "β-S-2.3.1")
-	s.Spacer(2)
+	fmt.Println(c.CL + c.B3 + "SkilStak Support System")
+	fmt.Println(c.O + "This system runs on the following module versions")
+	fmt.Println(c.B1+"S3 Main		", c.V+"β-S-2.3.1")
+	fmt.Println(c.B1+"Support By Tickets	", e.Version)
+	s.Spacer(1)
 	fmt.Println(c.B2 + "How can we help you today?")
 	fmt.Println(c.R+"{A}", c.G, "Get programming help.")
 	//fmt.Println(c.R+"{B}", c.G, "Get miscellaneous help.")
