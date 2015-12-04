@@ -12,7 +12,7 @@ import (
 func Startup() {
 	done := false
 	fmt.Println(c.CL)
-	fmt.Println(c.B3+"Support By Ticket sss module by @whitman-colm & @donovank", c.V, "V β3.5.2")
+	fmt.Println(c.B3+"Support By Ticket sss module by @whitman-colm & @donovank", c.V, "V β4.1.4")
 	done = false
 	/////declaring username
 	user := ""
@@ -92,6 +92,7 @@ func nonUrgent(user string, priority string) {
 		case "C", "c":
 			studentemail, _ := i.Prompt(c.CL + c.G + "What is your SLACK ID?\n" + c.B + "> " + c.M)
 			newcontact = "slack me at " + studentemail + "."
+			done = true
 		default:
 			fmt.Println(c.B2, "Sorry M9, thats not a valid statment...")
 		}
