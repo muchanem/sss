@@ -20,10 +20,10 @@ There is no way this is complete. But we can improve it in many ways, here's a l
 * ~~UUID Generator so TAs can look back at whats done.~~ **Currently being worked on!**
 * FAQ to curb the inevitable influx of tickets with answers for common troubles.
 * Message to Mr. Rob if there's an urgent ticket.
-* Make the skilstakticketer password not in plain sight and plaintext.
+* ~~Make the skilstakticketer password not in plain sight and plaintext.~~ **Nuts to it, the worst result is somebody getting into an email with no data relating to skilstak and us having to get a new email.**
 * Find a way to prevent "silly" tickets (*cough* donovank *cough*)
 * Find a way to prevent TAs being jerks.
 * Sort gMail inbox
 
 ##Running the program
-When it launches, s3 can be called with sss for the stable version or ssse for the experimental version (now with 50% more bugs!).
+When it launches, s3 can be called with sss anywhere on the command line. While it is installed at this time, we ask that you don't use it because it's still in β 1.0. Wait a few weeks. Put your errors on the slack room and we'll try to hep.
