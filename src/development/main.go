@@ -11,16 +11,19 @@ import (
 )
 
 func main() {
-	fmt.Println(c.B3+"SkilStak Script Support", c.V, "V S-1.0.0")
+	fmt.Println(c.B3+"SkilStak Support System", c.V, "β-S-1.0.0")
 	s.Spacer(2)
 	fmt.Println(c.B2 + "How can we help you today?")
-	fmt.Println(c.R+"{A}", c.G, "Submit a ticket")
-	fmt.Println(c.R+"{B}", c.G, "I'm fine, thanks for asking")
+	fmt.Println(c.R+"{A}", c.G, "Get programming help.")
+	fmt.Println(c.R+"{B}", c.G, "Get miscellaneous help.")
+	fmt.Println(c.R+"{C}", c.G, "I'm fine, thanks for asking.")
 	function, _ := i.Prompt(c.B + "> " + c.M)
 	function = strings.ToLower(function)
 	switch function {
 	case "a":
 		e.Startup()
+	//case "b":
+	//Setup slack helper lib. STOP SLACKING!
 	case "b":
 		os.Exit(-1)
 	default:

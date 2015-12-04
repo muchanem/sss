@@ -1,2 +1,3 @@
+# remember source me, don't run me
 export GOPATH=$HOME/repos/sss
 export PATH=$HOME/repos/sss/bin:$PATH
