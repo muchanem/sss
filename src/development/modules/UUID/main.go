@@ -7,6 +7,10 @@ import (
 	"strings"
 )
 
+func WriteUUID(fname string, data []byte) {
+	io.WriteFile(fname, data, 0664)
+}
+
 func LastLine(fname string) int {
 	data, err := io.ReadFile(fname)
 	u.QuitAtError(err)
