@@ -16,10 +16,7 @@ func main() {
 
 func LastLine(fname string) string {
 	data, err := io.ReadFile(fname)
-	if err != nil {
-		panic(err)
-	}
-
+	u.QuitAtError(err)
 	sdata := string(data)
 	spdata := strings.Split(sdata, "\n")
 	lline := spdata[len(spdata)-2]
