@@ -1,4 +1,4 @@
-package main
+package nil
 
 import (
 	"fmt"
@@ -16,7 +16,8 @@ func main() {
 }
 
 func WriteUUID(fname string) {
-	err := io.WriteFile()
+	err := io.WriteFile(fname)
+
 }
 
 func LastLine(fname string) int {
