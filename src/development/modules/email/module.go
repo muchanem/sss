@@ -128,7 +128,7 @@ func listForums() {
 	fmt.Println(c.G + "Bux")
 	fmt.Println(c.G + "Camp")
 	fmt.Println(c.G + "Ehacking")
-	fmt.Println(c.G + "FUNdimentals")
+	fmt.Println(c.G + "FUNdamentals")
 	fmt.Println(c.G + "Game")
 	fmt.Println(c.G + "Java")
 	fmt.Println(c.G + "Js")
@@ -174,7 +174,7 @@ func low() {
 					fmt.Println("https://skilstak.slack.com/messages/ehacking")
 					otherDone = true
 					s.Go(1)
-				case "fundimentals":
+				case "fundamentals":
 					fmt.Println("https://skilstak.slack.com/messages/fundamentals/")
 					otherDone = true
 					s.Go(1)
