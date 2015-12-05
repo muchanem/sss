@@ -9,11 +9,12 @@ import (
 	"strings"
 )
 
+var Version string = c.V + "V β-S-4.2.0"
+
 func Startup() {
-	Version := c.V + "V β-S-4.1.4"
 	done := false
 	fmt.Println(c.CL)
-	fmt.Println(c.B3+"Support By Ticket sss module by @whitman-colm & @donovank", Version)
+	fmt.Println(c.B3+"Support By Ticket S3 module by @whitman-colm", Version)
 	done = false
 	/////declaring username
 	user := ""
@@ -146,73 +147,92 @@ func low() {
 	fmt.Println(c.G + "yes")
 	openBrowser := ""
 	done := false
+	otherDone := false
 	for done == false {
 		openBrowser, _ = i.Prompt(c.B + "> " + c.M)
 		if openBrowser == "yes" {
 			fmt.Println(c.CL + c.B1 + "Ok, before we do, what does your question pretain to?")
 			fmt.Println("If you don't know, just type \"help\"")
-			for done == false {
+			for otherDone == false {
+				//For loop encases switch for definate answer
 				site, _ := i.Prompt(c.B + "> " + c.M)
 				site = strings.ToLower(site)
 				fmt.Println(c.CL + c.B1 + "Copy and paste this into your browser")
 				switch site {
 				case "bux":
 					fmt.Println("https://skilstak.slack.com/messages/bux/")
-					done = true
+					otherDone = true
+					s.Go(1)
 				case "camp":
 					fmt.Println("https://skilstak.slack.com/messages/camp/")
-					done = true
+					otherDone = true
+					s.Go(1)
 				case "ehacking", "e-hacking":
 					fmt.Println("https://skilstak.slack.com/messages/ehacking")
-					done = true
+					otherDone = true
+					s.Go(1)
 				case "fundimentals":
 					fmt.Println("https://skilstak.slack.com/messages/fundamentals/")
-					done = true
+					otherDone = true
+					s.Go(1)
 				case "game":
 					fmt.Println("https://skilstak.slack.com/messages/game")
-					done = true
+					otherDone = true
+					s.Go(1)
 				case "java":
 					fmt.Println("https://skilstak.slack.com/messages/java")
-					done = true
+					otherDone = true
+					s.Go(1)
 				case "js", "javascript":
 					fmt.Println("https://skilstak.slack.com/messages/javascript")
-					done = true
+					otherDone = true
+					s.Go(1)
 				case "pi", "linux pi", "π":
 					fmt.Println("https://skilstak.slack.com/messages/linuxpi")
-					done = true
+					otherDone = true
+					s.Go(1)
 				case "play", "code & play", "code + play", "code and play", "code && play":
 					fmt.Println("https://skilstak.slack.com/messages/play")
-					done = true
+					otherDone = true
+					s.Go(1)
 				case "prep", "code & prep", "code + prep", "code and prep", "code && prep":
 					fmt.Println("https://skilstak.slack.com/messages/prep")
-					done = true
+					otherDone = true
+					s.Go(1)
 				case "py", "python":
 					fmt.Println("https://skilstak.slack.com/messages/python/")
-					done = true
+					otherDone = true
+					s.Go(1)
 				case "web":
 					fmt.Println("https://skilstak.slack.com/messages/web")
-					done = true
+					otherDone = true
+					s.Go(1)
 				case "golang", "go":
 					fmt.Println("https://skilstak.slack.com/messages/golang/")
-					done = true
+					otherDone = true
+					s.Go(1)
 				case "pro":
 					fmt.Println("https://skilstak.slack.com/messages/pro")
-					done = true
+					otherDone = true
+					s.Go(1)
 				case "swat", "s.w.a.t.", "s.w.a.t":
 					fmt.Println("https://skilstak.slack.com/messages/swat")
-					done = true
+					otherDone = true
+					s.Go(1)
 				default:
 					listForums()
 				}
 				//the switch statment is now done
 			}
+			s.Bye()
 			//the encasing for loop is done
-		} else if openBrowser == "no" {
-			fmt.Println(c.B2 + "Ok then. Sorry we were not of any help...")
 			done = true
+		} else /*Stupid long first if is done*/ if openBrowser == "no" {
+			fmt.Println(c.B2 + "Ok then. Sorry we were not of any help...")
+			s.Bye()
 		} else {
 			fmt.Println(c.B2 + "Yeah no... I don't know what you just said")
 		}
-		done = true
 	}
-}
+	//for loop done
+} //function done
