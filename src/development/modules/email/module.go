@@ -1,6 +1,7 @@
 package nil
 
 import (
+	id "../UUID"
 	"fmt"
 	c "github.com/skilstak/go/colors"
 	i "github.com/whitman-colm/go-1/utils/input"
@@ -99,15 +100,15 @@ func nonUrgent(user string, priority string) {
 			fmt.Println(c.B2, "Sorry M9, thats not a valid statment...")
 		}
 	}
+	uuid := id.LastLine(listOfUUID)
 	to := []string{"skilstakta@gmail.com"}
-	msg := []byte("To: skilstakta@gmail.com\r\n" +
+	msg := []byte("To: skilstakta@gmail.com\r\n"+
 		//TODO: add ticket ID to subject line before "hey, I'm user"
-		"Subject: TICKET #(id).  Hey, I'm " + user + ". I need some help with " + lang + ". For context, it's " + priority + " priority.\r\n" +
-		"\r\n" +
-		"So pretty much... " + details + "\r\nThe best way to contact me is to " + newcontact + "\r\n\nThis was sent using the automated TicketBot.")
+		"Subject: TICKET (", uuid, ").  Hey, I'm "+user+". I need some help with "+lang+". For context, it's "+priority+" priority.\r\n"+
+		"\r\n"+
+		"So pretty much... "+details+"\r\nThe best way to contact me is to "+newcontact+"\r\n\nThis was sent using the automated TicketBot.")
 
 	auth := smtp.PlainAuth("", "skilstakticketer@gmail.com", "obviouspassword", "smtp.gmail.com")
-
 	err := smtp.SendMail("smtp.gmail.com:587", auth, "skilstakticketer@gmail.com", to, msg)
 	s.QuitAtError(err)
 	s.Go(0)
