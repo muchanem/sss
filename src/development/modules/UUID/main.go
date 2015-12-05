@@ -9,16 +9,21 @@ import (
 )
 
 func main() {
-	test, err := strconv.Atoi(LastLine("test.txt"))
+	x, err := strconv.Atoi(LastLine("test.txt"))
+	y := x + 1
 	u.QuitAtError(err)
 	fmt.Println(test)
 }
 
-func LastLine(fname string) string {
+func WriteUUID(fname string) {
+	err := io.WriteFile()
+}
+
+func LastLine(fname string) int {
 	data, err := io.ReadFile(fname)
 	u.QuitAtError(err)
 	sdata := string(data)
 	spdata := strings.Split(sdata, "\n")
 	lline := spdata[len(spdata)-2]
-	return lline
+	return strconv.Atoi(lline)
 }
