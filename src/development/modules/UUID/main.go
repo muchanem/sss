@@ -10,10 +10,7 @@ import (
 
 func main() {
 	x, err := strconv.Atoi(LastLine("test.txt"))
-	y := x + 1
-	u.QuitAtError(err)
-	fmt.Println(test)
-}
+
 
 func WriteUUID(fname string) {
 	err := io.WriteFile()
