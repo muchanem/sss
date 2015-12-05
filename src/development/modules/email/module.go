@@ -100,7 +100,7 @@ func nonUrgent(user string, priority string) {
 			fmt.Println(c.B2, "Sorry M9, thats not a valid statment...")
 		}
 	}
-	uuid := id.LastLine(listOfUUID)
+	uuid := id.LastLine("listOfUUID.txt")
 	to := []string{"skilstakta@gmail.com"}
 	msg := []byte("To: skilstakta@gmail.com\r\n"+
 		//TODO: add ticket ID to subject line before "hey, I'm user"
@@ -113,8 +113,8 @@ func nonUrgent(user string, priority string) {
 	s.QuitAtError(err)
 	s.Go(0)
 	fmt.Println(c.B3 + "Sent! Help is on its way!")
-	newUuid := []byte(uuid)
-	id.WriteUUID(listOfUUID, newUuid)
+	newUuid := []byte{uuid + 1}
+	id.WriteUUID("listOfUUID.txt", newUuid)
 }
 
 func devurgent(user string) {
