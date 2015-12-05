@@ -9,9 +9,8 @@ import (
 	"strings"
 )
 
-Version := c.V+"V β-S-4.1.4"
-
 func Startup() {
+	Version := c.V + "V β-S-4.1.4"
 	done := false
 	fmt.Println(c.CL)
 	fmt.Println(c.B3+"Support By Ticket sss module by @whitman-colm & @donovank", Version)

@@ -1,11 +1,11 @@
 package main
 
 import (
+	e "./modules/email"
 	"fmt"
 	c "github.com/skilstak/go/colors"
 	i "github.com/whitman-colm/go-1/utils/input"
 	s "github.com/whitman-colm/go-1/utils/other"
-	e "github.com/whitman-colm/sss/src/development/modules/email"
 	"os"
 	"strings"
 )
@@ -13,7 +13,7 @@ import (
 func main() {
 	fmt.Println(c.CL + c.B3 + "SkilStak Support System")
 	fmt.Println(c.O + "This system runs on the following module versions")
-	fmt.Println(c.B1+"S3 Main		", c.V+"β-S-2.3.1")
+	fmt.Println(c.B1+"S3 Main		", c.V+"β-S-3.0.0")
 	fmt.Println(c.B1+"Support By Tickets	", e.Version)
 	s.Spacer(1)
 	fmt.Println(c.B2 + "How can we help you today?")
