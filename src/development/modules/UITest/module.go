@@ -7,7 +7,10 @@ import (
 	c "github.com/skilstak/go/colors"
 )
 
+const version string = c.V + "V β-S-1.0.2"
+
 func Output() {
+	fmt.Print(c.Clear)
 	fmt.Println(c.B3 + "╔═════════════════════════════════════════════════════╗")
 	fmt.Println(c.B3 + "║ " + c.Y + "SkilStak Support System, By: " + c.G + "@whitman-colm          " + c.B3 + "║")
 	fmt.Println(c.B3 + "║ " + c.O + "This is run by the following modules:               " + c.B3 + "║")
@@ -15,7 +18,7 @@ func Output() {
 	fmt.Println(c.B3 + "║ " + c.V + "SSS Main  |  " + c.V + "V β-S-3.1.0                            " + c.B3 + "║")
 	fmt.Println(c.B3 + "║ " + c.V + "SSS Email |  " + e.Version + "                            " + c.B3 + "║")
 	fmt.Println(c.B3 + "║ " + c.V + "SSS UUID  |  " + id.Version + "                            " + c.B3 + "║")
-	fmt.Println(c.B3 + "║ " + c.V + "SSS UUID  |  " + c.V + "V β-S-1.0.2                             " + c.B3 + "║")
+	fmt.Println(c.B3 + "║ " + c.V + "SSS UI    |  " + version + "                            " + c.B3 + "║")
 	fmt.Println(c.B3 + "╚═════════════════════════════════════════════════════╝")
 	fmt.Println()
 	fmt.Println(c.M + "How can I help you today?")
