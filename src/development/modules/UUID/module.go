@@ -10,8 +10,8 @@ import (
 const Version string = "\033[1;35mV ß-S-1.0.4"
 
 func WriteUUID(fname string, data int) {
-	bconv = strings.Split(stringconv.Itoa(data), "")
-	bl = []byte{}
+	bconv := strings.Split(stringconv.Itoa(data), "")
+	bl := []byte{}
 	for _, asc := range bconv {
 		blr := append(byte(bconv), bl)
 	}
