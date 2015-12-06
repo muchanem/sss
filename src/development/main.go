@@ -13,7 +13,7 @@ import (
 func main() {
 	l.Output()
 	fmt.Println()
-	function, _ := i.Prompt(c.B + "> " + c.M)
+	function, _ := i.Prompt(c.B + "sss@skilstak:~$ " + c.M)
 	function = strings.ToLower(function)
 	done := false
 	for done == false {
