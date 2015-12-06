@@ -102,10 +102,10 @@ func nonUrgent(user string, priority string) {
 	}
 	uuid := id.LastLine("listOfUUID.txt")
 	to := []string{"skilstakta@gmail.com"}
-	msg := []byte("To: skilstakta@gmail.com\r\n"+
-		"Subject: TICKET", uuid, ".  Hey, I'm "+user+". I need some help with "+lang+". For context, it's "+priority+" priority.\r\n"+
-		"\r\n"+
-		"So pretty much... "+details+" The best way to contact me is to "+newcontact+"\r\n\nThis was sent using the automated TicketBot.")
+	msg := []byte("To: skilstakta@gmail.com\r\n" +
+		"Subject: TICKET #" + string(uuid) + ".  Hey, I'm " + user + ". I need some help with " + lang + ". For context, it's " + priority + " priority.\r\n" +
+		"\r\n" +
+		"So pretty much... " + details + " The best way to contact me is to " + newcontact + "\r\n\nThis was sent using the automated TicketBot.")
 
 	auth := smtp.PlainAuth("", "skilstakticketer@gmail.com", "obviouspassword", "smtp.gmail.com")
 	err := smtp.SendMail("smtp.gmail.com:587", auth, "skilstakticketer@gmail.com", to, msg)
