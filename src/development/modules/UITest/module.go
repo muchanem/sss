@@ -1,4 +1,4 @@
-package main
+package nil
 
 import (
 	id "development/modules/UUID"
@@ -22,10 +22,4 @@ func Output() {
 	fmt.Println(c.M + "How can I help you today?")
 	fmt.Println(c.R + "[A]" + c.B + " I want programming help!")
 	fmt.Println(c.R + "[B]" + c.B + " Just stoppin' by.")
-}
-
-func main() {
-	fmt.Print(c.Clear)
-	Output()
-	i.Prompt("> ")
 }
