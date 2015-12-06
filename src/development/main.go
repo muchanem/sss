@@ -7,13 +7,15 @@ import (
 	c "github.com/skilstak/go/colors"
 	i "github.com/whitman-colm/go-1/utils/input"
 	"os"
+	"os/user"
 	"strings"
 )
 
 func main() {
+	usr, _ := user.Current()
 	l.Output()
 	fmt.Println()
-	function, _ := i.Prompt(c.B00 + "you" + c.B01 + "@sss" + c.Y + "~$:" + c.M)
+	function, _ := i.Prompt(c.B1 + usr.Username + c.B01 + "@" + c.B00 + "skilstak:" + c.Y + "sss" + c.C + "$ " + c.X)
 	function = strings.ToLower(function)
 	done := false
 	for done == false {
