@@ -1,6 +1,7 @@
 package main
 
 import (
+	id "development/modules/UUID"
 	e "development/modules/email"
 	"fmt"
 	c "github.com/skilstak/go/colors"
@@ -15,6 +16,7 @@ func main() {
 	fmt.Println(c.O + "This system runs on the following module versions")
 	fmt.Println(c.B1 + "S3 Main             |" + c.V + "V β-S-3.1.0")
 	fmt.Println(c.B1 + "Support By Tickets  |" + e.Version)
+	fmt.Println(c.B1 + "UUID Gen            |" + id.Version)
 	s.Spacer(1)
 	fmt.Println(c.B2 + "How can we help you today?")
 	fmt.Println(c.R+"{A}", c.G, "Get programming help.")

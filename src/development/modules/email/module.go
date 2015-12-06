@@ -10,7 +10,7 @@ import (
 	"strings"
 )
 
-var Version string = c.V + "V β-S-4.2.1"
+const Version string = c.V + "V β-S-4.2.2"
 
 func Startup() {
 	done := false

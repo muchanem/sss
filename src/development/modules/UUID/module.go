@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-const version string = "ß-S-1.0.0"
+const Version string = "\033[1;35mV ß-S-1.0.2"
 
 func WriteUUID(fname string, data []byte) {
 	io.WriteFile(fname, data, 0664)
