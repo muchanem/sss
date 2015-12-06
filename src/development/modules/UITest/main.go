@@ -1,4 +1,4 @@
-package main
+package nil
 
 import (
 	id "development/modules/UUID"
