@@ -7,19 +7,28 @@ import (
 	"strings"
 )
 
-const Version string = "\033[1;35mV ß-S-1.0.2"
+const Version string = "\033[1;35mV ß-S-1.0.4"
 
-func WriteUUID(fname string, data []byte) {
-	io.WriteFile(fname, data, 0664)
+func WriteUUID(fname string, data int) {
+	bconv = strings.Split(stringconv.Itoa(data), "")
+	bl = []byte{}
+	for _, asc := range bconv {
+		blr := append(byte(bconv), bl)
+	}
+	io.WriteFile(fname, blr, 0664)
 }
 
 func LastLine(fname string) int {
 	data, err := io.ReadFile(fname)
-	u.QuitAtError(err)
+	if err != nil {
+		u.QuitAtError(err)
+	}
 	sdata := string(data)
 	spdata := strings.Split(sdata, "\n")
 	lline := spdata[len(spdata)-2]
 	uuid, err := strconv.Atoi(lline)
-	u.QuitAtError(err)
+	if err != nil {
+		u.QuitAtError(err)
+	}
 	return uuid
 }
