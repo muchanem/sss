@@ -13,7 +13,7 @@ import (
 func main() {
 	l.Output()
 	fmt.Println()
-	function, _ := i.Prompt(c.X + "sss@skilstak:~$ " + c.M)
+	function, _ := i.Prompt(c.B00 + "you" + c.B01 + "@sss" + c.Y + "~$:" + c.M)
 	function = strings.ToLower(function)
 	done := false
 	for done == false {
@@ -26,6 +26,8 @@ func main() {
 			os.Exit(-1)
 		default:
 			fmt.Println("Sorry, try entering one of the letters in red")
+			function, _ := i.Prompt(c.X + "sss@skilstak:~$ " + c.M)
+			function = strings.ToLower(function)
 		}
 	}
 }
