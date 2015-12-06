@@ -10,7 +10,7 @@ import (
 	"strings"
 )
 
-var Version string = c.V + "V β-S-4.2.0"
+var Version string = c.V + "V β-S-4.2.1"
 
 func Startup() {
 	done := false
@@ -103,10 +103,9 @@ func nonUrgent(user string, priority string) {
 	uuid := id.LastLine("listOfUUID.txt")
 	to := []string{"skilstakta@gmail.com"}
 	msg := []byte("To: skilstakta@gmail.com\r\n"+
-
-		"Subject: TICKET (", uuid, ").  Hey, I'm "+user+". I need some help with "+lang+". For context, it's "+priority+" priority.\r\n"+
+		"Subject: TICKET", uuid, ".  Hey, I'm "+user+". I need some help with "+lang+". For context, it's "+priority+" priority.\r\n"+
 		"\r\n"+
-		"So pretty much... "+details+"\r\nThe best way to contact me is to "+newcontact+"\r\n\nThis was sent using the automated TicketBot.")
+		"So pretty much... "+details+" The best way to contact me is to "+newcontact+"\r\n\nThis was sent using the automated TicketBot.")
 
 	auth := smtp.PlainAuth("", "skilstakticketer@gmail.com", "obviouspassword", "smtp.gmail.com")
 	err := smtp.SendMail("smtp.gmail.com:587", auth, "skilstakticketer@gmail.com", to, msg)
