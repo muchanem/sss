@@ -1,7 +1,7 @@
 package nil
 
 import (
-	id "../UUID"
+	id "development/modules/UUID"
 	"fmt"
 	c "github.com/skilstak/go/colors"
 	i "github.com/whitman-colm/go-1/utils/input"
@@ -103,7 +103,7 @@ func nonUrgent(user string, priority string) {
 	uuid := id.LastLine("listOfUUID.txt")
 	to := []string{"skilstakta@gmail.com"}
 	msg := []byte("To: skilstakta@gmail.com\r\n"+
-		//TODO: add ticket ID to subject line before "hey, I'm user"
+
 		"Subject: TICKET (", uuid, ").  Hey, I'm "+user+". I need some help with "+lang+". For context, it's "+priority+" priority.\r\n"+
 		"\r\n"+
 		"So pretty much... "+details+"\r\nThe best way to contact me is to "+newcontact+"\r\n\nThis was sent using the automated TicketBot.")

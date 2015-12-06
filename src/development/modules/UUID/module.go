@@ -19,5 +19,7 @@ func LastLine(fname string) int {
 	sdata := string(data)
 	spdata := strings.Split(sdata, "\n")
 	lline := spdata[len(spdata)-2]
-	return strconv.Atoi(lline)
+	uuid, err := strconv.Atoi(lline)
+	u.QuitAtError(err)
+	return uuid
 }
