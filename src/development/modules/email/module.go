@@ -112,7 +112,7 @@ func nonUrgent(user string, priority string) {
 	s.QuitAtError(err)
 	s.Go(0)
 	fmt.Println(c.B3 + "Sent! Help is on its way!")
-	newUuid := []byte{uuid + 1}
+	newUuid := []byte{byte(uuid + 1)}
 	id.WriteUUID("listOfUUID.txt", newUuid)
 }
 
