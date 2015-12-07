@@ -10,7 +10,7 @@ import (
 const Version string = "\033[1;35mV ß-S-1.0.5"
 
 func WriteUUID(fname string, data int) {
-<<<<<<< HEAD
+	//<<<<<<< HEAD
 	bconv := /*strings.Split(*/ strconv.Itoa(data) /*, "")*/
 	//Defines bconv as an array of strings from the int data, so 1020 becomes "1","0","2","0"
 	//bl := []byte{}
@@ -23,7 +23,7 @@ func WriteUUID(fname string, data int) {
 		//appends
 	}*/
 	io.WriteFile(fname, blr, 0664)
-=======
+	//=======
 	bconv := strings.Split(strconv.Itoa(data), "")
 	bl := []byte{}
 	for _, asc := range bconv {
@@ -31,7 +31,7 @@ func WriteUUID(fname string, data int) {
 		append(ascb, bl)
 	}
 	io.WriteFile(fname, bl, 0664)
->>>>>>> f4b01a6e7669947e6b961cb215ced408a28ee7b2
+	//>>>>>>> f4b01a6e7669947e6b961cb215ced408a28ee7b2
 }
 
 func LastLine(fname string) int {
