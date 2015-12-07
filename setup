@@ -1,4 +1,4 @@
 # remember source me, don't run me
 export GOPATH=$HOME/repos/sss
 export GOBIN=$HOME/repos/sss/bin
-export PATH=$HOME/repos/hello/go/bin:$PATH
+export PATH=$HOME/repos/sss/bin:$PATH
