@@ -112,7 +112,12 @@ func nonUrgent(user string, priority string) {
 	s.QuitAtError(err)
 	s.Go(0)
 	fmt.Println(c.B3 + "Sent! Help is on its way!")
+<<<<<<< HEAD
 	id.WriteUUID("listOfUUID.txt", uuid)
+=======
+	newUuid := byte(int(uuid) + 49)
+	id.WriteUUID("listOfUUID.txt", []byte{newUuid})
+>>>>>>> f4b01a6e7669947e6b961cb215ced408a28ee7b2
 }
 
 func devurgent(user string) {
