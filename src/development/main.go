@@ -28,7 +28,7 @@ func main() {
 			os.Exit(-1)
 		default:
 			fmt.Println("Sorry, try entering one of the letters in red")
-			function, _ := i.Prompt(c.X + "sss@skilstak:~$ " + c.M)
+			function, _ := i.Prompt(c.B1 + usr.Username + c.B01 + "@" + c.B00 + "sss:" + c.Y + "~" + c.C + "$ " + c.X)
 			function = strings.ToLower(function)
 		}
 	}
