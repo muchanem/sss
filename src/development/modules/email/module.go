@@ -1,7 +1,8 @@
 package nil
 
 import (
-	id "development/modules/UUID"
+	timeid "development/modules/TimeID"
+	//id "development/modules/UUID"
 	"fmt"
 	c "github.com/skilstak/go/colors"
 	i "github.com/whitman-colm/go-1/utils/input"
@@ -100,10 +101,11 @@ func nonUrgent(user string, priority string) {
 			fmt.Println(c.B2, "Sorry M9, thats not a valid statment...")
 		}
 	}
-	uuid := id.LastLine("listOfUUID.txt")
+	//	uuid := id.LastLine("listOfUUID.txt")
+	uuid := timeid.GenerateID()
 	to := []string{"skilstakta@gmail.com"}
 	msg := []byte("To: skilstakta@gmail.com\r\n" +
-		"Subject: TICKET #" + string(uuid) + ".  Hey, I'm " + user + ". I need some help with " + lang + ". For context, it's " + priority + " priority.\r\n" +
+		"Subject: TICKET #" + uuid + ".  Hey, I'm " + user + ". I need some help with " + lang + ". For context, it's " + priority + " priority.\r\n" +
 		"\r\n" +
 		"So pretty much... " + details + " The best way to contact me is to " + newcontact + "\r\n\nThis was sent using the automated TicketBot.")
 
@@ -112,12 +114,13 @@ func nonUrgent(user string, priority string) {
 	s.QuitAtError(err)
 	s.Go(0)
 	fmt.Println(c.B3 + "Sent! Help is on its way!")
-<<<<<<< HEAD
-	id.WriteUUID("listOfUUID.txt", uuid)
-=======
-	newUuid := byte(int(uuid) + 49)
-	id.WriteUUID("listOfUUID.txt", []byte{newUuid})
->>>>>>> f4b01a6e7669947e6b961cb215ced408a28ee7b2
+	/*<<<<<<< HEAD
+	  	id.WriteUUID("listOfUUID.txt", uuid)
+	  =======
+	  	newUuid := byte(int(uuid) + 49)
+	  	id.WriteUUID("listOfUUID.txt", []byte{newUuid})
+	  >>>>>>> f4b01a6e7669947e6b961cb215ced408a28ee7b2
+	*/
 }
 
 func devurgent(user string) {
