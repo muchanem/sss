@@ -3,15 +3,15 @@ package nil
 import (
 	timeid "development/modules/TimeID"
 	//id "development/modules/UUID"
+	i "development/modules/other"
 	"fmt"
 	c "github.com/skilstak/go/colors"
-	i "github.com/whitman-colm/go-1/utils/input"
 	s "github.com/whitman-colm/go-1/utils/other"
 	"net/smtp"
 	"strings"
 )
 
-const Version string = c.V + "V β-S-4.2.2"
+const Version string = c.V + "V β-S-4.3.2"
 
 func Startup() {
 	done := false
@@ -24,7 +24,7 @@ func Startup() {
 		fmt.Println(c.CL + c.B2 + "No shame in needing help. \nBut please fill this out and people will be able to help ASAP!")
 		s.Spacer(2)
 		fmt.Println(c.G + "What is your skilstak.sh username?")
-		user, _ = i.Prompt(c.B + ">" + c.M)
+		user, _ = i.Input("email", "sss")
 	}
 	/////Declaring priority
 	fmt.Println(c.CL + c.B2 + "No shame in needing help. \nBut please fill this out and people will be able to help ASAP!")
@@ -35,10 +35,10 @@ func Startup() {
 	fmt.Println(c.O + "Medium")
 	fmt.Println(c.R + "High")
 	fmt.Println(c.V + "Urgent")
-	priority, _ := i.Prompt(c.B + ">" + c.M)
 	/////
-	priority = strings.ToLower(priority)
 	for done == false {
+		priority, _ := i.Input("email", "sss")
+		priority = strings.ToLower(priority)
 		switch priority {
 		case "low":
 			low()
@@ -62,7 +62,7 @@ func nonUrgent(user string, priority string) {
 		fmt.Println(c.CL + c.B2 + "No shame in needing help. \nBut please fill this out and people will be able to help ASAP!")
 		s.Spacer(2)
 		fmt.Println(c.G + "What language or software does your problem relate to? (GOlang, Python3, JS, Java, etc.)")
-		lang, _ = i.Prompt(c.B + "> " + c.M)
+		lang, _ = i.Input("email", "sss")
 	}
 	/////
 	details := ""
@@ -70,7 +70,7 @@ func nonUrgent(user string, priority string) {
 		fmt.Println(c.CL + c.B2 + "No shame in needing help. \nBut please fill this out and people will be able to help ASAP!")
 		s.Spacer(2)
 		fmt.Println(c.G + "Give a breif description of your problem")
-		details, _ = i.Prompt(c.B + "> " + c.M)
+		details, _ = i.Input("email", "sss")
 	}
 	/////
 	fmt.Println(c.CL + c.B2 + "No shame in needing help. \nBut please fill this out and people will be able to help ASAP!")
@@ -84,17 +84,19 @@ func nonUrgent(user string, priority string) {
 	done = false
 
 	for done == false {
-		contact, _ := i.Prompt(c.B + ">" + c.M)
+		contact, _ := i.Input("email", "sss")
 		switch contact {
 		case "A", "a":
-			studentemail, _ := i.Prompt(c.CL + c.G + "What is the email address you'd like to use?\n " + c.B + ">" + c.M)
+			fmt.Println(c.CL + c.G + "What is the email address you'd like to use?")
+			studentemail, _ := i.Input("email", "sss")
 			newcontact = "e-mail me at " + studentemail + "."
 			done = true
 		case "B", "b":
 			newcontact = "TALK to me on the skilstak.sh server @ " + user + "."
 			done = true
 		case "C", "c":
-			studentemail, _ := i.Prompt(c.CL + c.G + "What is your SLACK ID?\n" + c.B + "> " + c.M)
+			fmt.Println(c.CL + c.G + "What is the SLACK ID you'd like to use?")
+			studentemail, _ := i.Input("email", "sss")
 			newcontact = "slack me at " + studentemail + "."
 			done = true
 		default:
@@ -105,7 +107,7 @@ func nonUrgent(user string, priority string) {
 	uuid := timeid.GenerateID()
 	to := []string{"skilstakta@gmail.com"}
 	msg := []byte("To: skilstakta@gmail.com\r\n" +
-		"Subject: TICKET #" + uuid + ".  Hey, I'm " + user + ". I need some help with " + lang + ". For context, it's " + priority + " priority.\r\n" +
+		"Subject: TICKET " + uuid + ":  Hey, I'm " + user + ". I need some help with " + lang + ". For context, it's " + priority + " priority.\r\n" +
 		"\r\n" +
 		"So pretty much... " + details + " The best way to contact me is to " + newcontact + "\r\n\nThis was sent using the automated TicketBot.")
 
@@ -158,13 +160,13 @@ func low() {
 	done := false
 	otherDone := false
 	for done == false {
-		openBrowser, _ = i.Prompt(c.B + "> " + c.M)
+		openBrowser, _ = i.Input("email", "sss")
 		if openBrowser == "yes" {
 			fmt.Println(c.CL + c.B1 + "Ok, before we do, what does your question pretain to?")
 			fmt.Println("If you don't know, just type \"help\"")
 			for otherDone == false {
 				//For loop encases switch for definate answer
-				site, _ := i.Prompt(c.B + "> " + c.M)
+				site, _ := i.Input("email", "sss")
 				site = strings.ToLower(site)
 				fmt.Println(c.CL + c.B1 + "Copy and paste this into your browser")
 				switch site {

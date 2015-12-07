@@ -15,7 +15,7 @@ func Output() {
 	fmt.Println(c.B3 + "║ " + c.Y + "SkilStak Support System, By: " + c.G + "whitman-colm & tsnlc04 " + c.B3 + "║")
 	fmt.Println(c.B3 + "║ " + c.O + "This is run by the following modules:               " + c.B3 + "║")
 	fmt.Println(c.B3 + "║                                                     ║")
-	fmt.Println(c.B3 + "║ " + c.V + "SSS Main  |  " + c.V + "V β-S-3.1.0                            " + c.B3 + "║")
+	fmt.Println(c.B3 + "║ " + c.V + "SSS Main  |  " + c.V + "V β-S-3.2.0                            " + c.B3 + "║")
 	fmt.Println(c.B3 + "║ " + c.V + "SSS Email |  " + e.Version + "                            " + c.B3 + "║")
 	fmt.Println(c.B3 + "║ " + c.V + "SSS UUID  |  " + id.Version + "                            " + c.B3 + "║")
 	fmt.Println(c.B3 + "║ " + c.V + "SSS UI    |  " + version + "                            " + c.B3 + "║")
