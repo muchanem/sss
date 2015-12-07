@@ -100,7 +100,7 @@ func nonUrgent(user string, priority string) {
 			fmt.Println(c.B2, "Sorry M9, thats not a valid statment...")
 		}
 	}
-	uuid := id.LastLine("development/modules/UUID/listOfUUID.txt")
+	uuid := id.LastLine("listOfUUID.txt")
 	to := []string{"skilstakta@gmail.com"}
 	msg := []byte("To: skilstakta@gmail.com\r\n" +
 		"Subject: TICKET #" + string(uuid) + ".  Hey, I'm " + user + ". I need some help with " + lang + ". For context, it's " + priority + " priority.\r\n" +

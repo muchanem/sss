@@ -10,12 +10,13 @@ import (
 const Version string = "\033[1;35mV ß-S-1.0.4"
 
 func WriteUUID(fname string, data int) {
-	bconv := strings.Split(stringconv.Itoa(data), "")
+	bconv := strings.Split(strconv.Itoa(data), "")
 	bl := []byte{}
 	for _, asc := range bconv {
-		blr := append(byte(bconv), bl)
+		ascb := []byte(asc)
+		append(ascb, bl)
 	}
-	io.WriteFile(fname, blr, 0664)
+	io.WriteFile(fname, bl, 0664)
 }
 
 func LastLine(fname string) int {
