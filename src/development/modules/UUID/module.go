@@ -1,6 +1,7 @@
 package nil
 
 import (
+	"fmt"
 	u "github.com/whitman-colm/go-1/utils/other"
 	io "io/ioutil"
 	"strconv"
@@ -10,6 +11,16 @@ import (
 const Version string = "\033[1;35mV ß-S-1.0.5"
 
 func WriteUUID(fname string, data int) {
+	fmt.Println(data)
+	fmt.Println(fname)
+}
+
+func LastLine(fname string) int {
+	fmt.Println(fname)
+	return 10
+}
+
+func devWriteUUID(fname string, data int) {
 	//<<<<<<< HEAD
 	bconv := /*strings.Split(*/ strconv.Itoa(data) /*, "")*/
 	//Defines bconv as an array of strings from the int data, so 1020 becomes "1","0","2","0"
@@ -34,7 +45,7 @@ func WriteUUID(fname string, data int) {
 	//>>>>>>> f4b01a6e7669947e6b961cb215ced408a28ee7b2
 }
 
-func LastLine(fname string) int {
+func devLastLine(fname string) int {
 	data, err := io.ReadFile(fname)
 	u.QuitAtError(err)
 	sdata := string(data)
