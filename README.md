@@ -1,6 +1,7 @@
 # SSS
-SkilStak Support System is a help desk for SkilStak by whitman-colm and tslnc04 on github.
+SkilStak Support System is a help desk for SkilStak by [whitman-colm](https://github.com/whitman-colm), [CoderPythonX](https://github.com/tslnc04) and [dfk](https://github.com/donovank) on github.
 
+**There is a FAQ website** S3's FAQ source code can be viewed [here](https://github.com/whitman-colm/sss-faq) and, as of now, the actual site is not up, although Whitman is trying to get sss.skilstak.io
 
 ## The Story so far:
 As of now, S3 will send an email to TAs with priotity, software and discription of the problem and a Unique identifier. S3 is also it's own repo.
@@ -21,4 +22,4 @@ There is no way this is complete. But we can improve it in many ways, here's a l
 * Find a way to prevent TAs being jerks.
 
 ##Running the program
-When it launches, s3 can be called with sss anywhere on the command line. While it is installed at this time, we ask that you use it with knowlege that it does not represent the finished product and that it's still in beta and any tickets will not be taken as legitimate problems. Wait a few weeks. Put your errors on the #sss slack room and we'll try to hep there.
+When it launches, s3 can be called with sss anywhere on the command line. While it is installed at this time, we ask that you use it with knowlege that it does not represent the finished product and that it's still in beta and any tickets will not be taken as legitimate problems. Wait a few weeks. Put your errors on the #sss slack room and TAs will try to hep there.
