@@ -12,7 +12,7 @@ import (
 	"strings"
 )
 
-const Version string = c.V + "V β-S-4.3.2"
+const Version string = c.V + "V β-S-4.3.3"
 
 func Startup() {
 	done := false
@@ -24,12 +24,12 @@ func Startup() {
 	/////Declaring priority
 	fmt.Println(c.CL + c.B2 + "No shame in needing help. \nBut please fill this out and people will be able to help ASAP!")
 	s.Spacer(2)
-	fmt.Println(c.G + "PLEASE be honest, what is the priority of the ticket?")
+	fmt.Println(c.B1 + "PLEASE be honest, what is the priority of the ticket?")
 	fmt.Println()
-	fmt.Println(c.Y + "Low")
-	fmt.Println(c.O + "Medium")
-	fmt.Println(c.R + "High")
-	fmt.Println(c.V + "Urgent")
+	fmt.Println(c.B01 + "Low")
+	fmt.Println(c.B00 + "Medium")
+	fmt.Println(c.B01 + "High")
+	fmt.Println(c.B00 + "Urgent")
 	/////
 	for done == false {
 		priority, _ := i.Input("email", "sss")
@@ -44,7 +44,7 @@ func Startup() {
 			devurgent(user)
 			done = true
 		default:
-			fmt.Println(c.B2 + "That's not valid, sorry")
+			fmt.Println(c.X + "That's not valid, sorry")
 		}
 	}
 }
@@ -56,7 +56,7 @@ func nonUrgent(user string, priority string) {
 
 		fmt.Println(c.CL + c.B2 + "No shame in needing help. \nBut please fill this out and people will be able to help ASAP!")
 		s.Spacer(2)
-		fmt.Println(c.G + "What language or software does your problem relate to? (GOlang, Python3, JS, Java, etc.)")
+		fmt.Println(c.B1 + "What language or software does your problem relate to? (GOlang, Python3, JS, Java, etc.)")
 		lang, _ = i.Input("email", "sss")
 	}
 	/////
@@ -64,16 +64,16 @@ func nonUrgent(user string, priority string) {
 	for details == "" {
 		fmt.Println(c.CL + c.B2 + "No shame in needing help. \nBut please fill this out and people will be able to help ASAP!")
 		s.Spacer(2)
-		fmt.Println(c.G + "Give a breif description of your problem")
+		fmt.Println(c.B1 + "Give a breif description of your problem")
 		details, _ = i.Input("email", "sss")
 	}
 	/////
 	fmt.Println(c.CL + c.B2 + "No shame in needing help. \nBut please fill this out and people will be able to help ASAP!")
 	s.Spacer(2)
 	fmt.Println(c.G + "Whats the best way someone can contact you for help on this problem?")
-	fmt.Println(c.R + "{ A } " + c.B1 + "e-Mail me at an email address")
-	fmt.Println(c.R + "{ B } " + c.B1 + "TALK to me on the skilstak.sh server @ " + user + ".")
-	fmt.Println(c.R + "{ C } " + c.B1 + "SLACK me (must provide username)")
+	fmt.Println(c.R + "{A} " + c.B01 + "e-Mail me at an email address")
+	fmt.Println(c.R + "{B} " + c.B00 + "TALK to me on the skilstak.sh server @ " + user + ".")
+	fmt.Println(c.R + "{C} " + c.B01 + "SLACK me (must provide username)")
 
 	newcontact := ""
 	done = false
@@ -82,7 +82,7 @@ func nonUrgent(user string, priority string) {
 		contact, _ := i.Input("email", "sss")
 		switch contact {
 		case "A", "a":
-			fmt.Println(c.CL + c.G + "What is the email address you'd like to use?")
+			fmt.Println(c.CL + c.B1 + "What is the email address you'd like to use?")
 			studentemail, _ := i.Input("email", "sss")
 			newcontact = "e-mail me at " + studentemail + "."
 			done = true
@@ -90,12 +90,12 @@ func nonUrgent(user string, priority string) {
 			newcontact = "TALK to me on the skilstak.sh server @ " + user + "."
 			done = true
 		case "C", "c":
-			fmt.Println(c.CL + c.G + "What is the SLACK ID you'd like to use?")
+			fmt.Println(c.CL + c.B1 + "What is the SLACK ID you'd like to use?")
 			studentemail, _ := i.Input("email", "sss")
 			newcontact = "slack me at " + studentemail + "."
 			done = true
 		default:
-			fmt.Println(c.B2, "Sorry M8, thats not a valid statment...")
+			fmt.Println(c.X, "Sorry M8, thats not a valid statment...")
 		}
 	}
 	//	uuid := id.LastLine("listOfUUID.txt")
@@ -128,21 +128,22 @@ func devurgent(user string) {
 
 func listForums() {
 	fmt.Println(c.CL + c.B2 + "Hmm... here are all the forums:")
-	fmt.Println(c.G + "Bux")
-	fmt.Println(c.G + "Camp")
-	fmt.Println(c.G + "Ehacking")
-	fmt.Println(c.G + "FUNdamentals")
-	fmt.Println(c.G + "Game")
-	fmt.Println(c.G + "Java")
-	fmt.Println(c.G + "Js")
-	fmt.Println(c.G + "Linux π")
-	fmt.Println(c.G + "Code && play")
-	fmt.Println(c.G + "Code && prep")
-	fmt.Println(c.G + "Python")
-	fmt.Println(c.G + "Web")
-	fmt.Println(c.G + "GOlang")
-	fmt.Println(c.G + "Pro")
-	fmt.Println(c.G + "S.W.A.T.")
+	s.Spacer(1)
+	fmt.Println(c.B01 + "Bux")
+	fmt.Println(c.B00 + "Camp")
+	fmt.Println(c.B01 + "Ehacking")
+	fmt.Println(c.B00 + "FUNdamentals")
+	fmt.Println(c.B01 + "Game")
+	fmt.Println(c.B00 + "Java")
+	fmt.Println(c.B01 + "Js")
+	fmt.Println(c.B00 + "Linux π")
+	fmt.Println(c.B01 + "Code && play")
+	fmt.Println(c.B00 + "Code && prep")
+	fmt.Println(c.B01 + "Python")
+	fmt.Println(c.B00 + "Web")
+	fmt.Println(c.B01 + "GOlang")
+	fmt.Println(c.B00 + "Pro")
+	fmt.Println(c.B01 + "S.W.A.T.")
 	s.Go(1)
 }
 func low() {
@@ -150,78 +151,94 @@ func low() {
 	fmt.Println(c.B1 + "Is that OK?")
 	fmt.Println()
 	fmt.Println(c.R + "no")
-	fmt.Println(c.G + "yes")
+	fmt.Println(c.R + "yes")
 	openBrowser := ""
 	done := false
 	otherDone := false
 	for done == false {
 		openBrowser, _ = i.Input("email", "sss")
 		if openBrowser == "yes" {
-			fmt.Println(c.CL + c.B1 + "Ok, before we do, what does your question pretain to?")
-			fmt.Println("If you don't know, just type \"help\"")
+			fmt.Println(c.CL + c.B2 + "Ok, before we do, what does your question pretain to?")
+			fmt.Println(c.B1 + "If you don't know, just type \"help\"")
 			for otherDone == false {
 				//For loop encases switch for definate answer
 				site, _ := i.Input("email", "sss")
 				site = strings.ToLower(site)
 				fmt.Println(c.CL + c.B1 + "Copy and paste this into your browser")
+				s.Spacer(1)
 				switch site {
 				case "bux":
+					fmt.Println(c.O)
 					fmt.Println("https://skilstak.slack.com/messages/bux/")
 					otherDone = true
 					s.Go(1)
 				case "camp":
+					fmt.Println(c.O)
 					fmt.Println("https://skilstak.slack.com/messages/camp/")
 					otherDone = true
 					s.Go(1)
 				case "ehacking", "e-hacking":
+					fmt.Println(c.O)
 					fmt.Println("https://skilstak.slack.com/messages/ehacking")
 					otherDone = true
 					s.Go(1)
 				case "fundamentals":
+					fmt.Println(c.O)
 					fmt.Println("https://skilstak.slack.com/messages/fundamentals/")
 					otherDone = true
 					s.Go(1)
 				case "game":
+					fmt.Println(c.O)
 					fmt.Println("https://skilstak.slack.com/messages/game")
 					otherDone = true
 					s.Go(1)
 				case "java":
+					fmt.Println(c.O)
 					fmt.Println("https://skilstak.slack.com/messages/java")
 					otherDone = true
 					s.Go(1)
 				case "js", "javascript":
+					fmt.Println(c.O)
 					fmt.Println("https://skilstak.slack.com/messages/javascript")
 					otherDone = true
 					s.Go(1)
 				case "pi", "linux pi", "π":
+					fmt.Println(c.O)
 					fmt.Println("https://skilstak.slack.com/messages/linuxpi")
 					otherDone = true
 					s.Go(1)
 				case "play", "code & play", "code + play", "code and play", "code && play":
+					fmt.Println(c.O)
 					fmt.Println("https://skilstak.slack.com/messages/play")
 					otherDone = true
 					s.Go(1)
 				case "prep", "code & prep", "code + prep", "code and prep", "code && prep":
+					fmt.Println(c.O)
 					fmt.Println("https://skilstak.slack.com/messages/prep")
 					otherDone = true
 					s.Go(1)
 				case "py", "python":
+					fmt.Println(c.O)
 					fmt.Println("https://skilstak.slack.com/messages/python/")
 					otherDone = true
 					s.Go(1)
 				case "web":
+					fmt.Println(c.O)
 					fmt.Println("https://skilstak.slack.com/messages/web")
 					otherDone = true
 					s.Go(1)
 				case "golang", "go":
+					fmt.Println(c.O)
 					fmt.Println("https://skilstak.slack.com/messages/golang/")
 					otherDone = true
 					s.Go(1)
 				case "pro":
+					fmt.Println(c.O)
 					fmt.Println("https://skilstak.slack.com/messages/pro")
 					otherDone = true
 					s.Go(1)
 				case "swat", "s.w.a.t.", "s.w.a.t":
+					fmt.Println(c.O)
 					fmt.Println("https://skilstak.slack.com/messages/swat")
 					otherDone = true
 					s.Go(1)
