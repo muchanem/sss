@@ -8,7 +8,7 @@ import (
 	c "github.com/skilstak/go/colors"
 	s "github.com/whitman-colm/go-1/utils/other"
 	"net/smtp"
-	us "os/user"
+	usr "os/user"
 	"strings"
 )
 
@@ -20,7 +20,8 @@ func Startup() {
 	fmt.Println(c.B3+"Support By Ticket S3 module by @whitman-colm", Version)
 	done = false
 	/////declaring username
-	user := us.Current
+	userStruct, _ := usr.Current()
+	user = userStruct.Username
 	/////Declaring priority
 	fmt.Println(c.CL + c.B2 + "No shame in needing help. \nBut please fill this out and people will be able to help ASAP!")
 	s.Spacer(2)
