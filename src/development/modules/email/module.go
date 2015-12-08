@@ -8,6 +8,7 @@ import (
 	c "github.com/skilstak/go/colors"
 	s "github.com/whitman-colm/go-1/utils/other"
 	"net/smtp"
+	us "os/user"
 	"strings"
 )
 
@@ -19,13 +20,7 @@ func Startup() {
 	fmt.Println(c.B3+"Support By Ticket S3 module by @whitman-colm", Version)
 	done = false
 	/////declaring username
-	user := ""
-	for user == "" {
-		fmt.Println(c.CL + c.B2 + "No shame in needing help. \nBut please fill this out and people will be able to help ASAP!")
-		s.Spacer(2)
-		fmt.Println(c.G + "What is your skilstak.sh username?")
-		user, _ = i.Input("email", "sss")
-	}
+	user := us.Current
 	/////Declaring priority
 	fmt.Println(c.CL + c.B2 + "No shame in needing help. \nBut please fill this out and people will be able to help ASAP!")
 	s.Spacer(2)
@@ -100,7 +95,7 @@ func nonUrgent(user string, priority string) {
 			newcontact = "slack me at " + studentemail + "."
 			done = true
 		default:
-			fmt.Println(c.B2, "Sorry M9, thats not a valid statment...")
+			fmt.Println(c.B2, "Sorry M8, thats not a valid statment...")
 		}
 	}
 	//	uuid := id.LastLine("listOfUUID.txt")
