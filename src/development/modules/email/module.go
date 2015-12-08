@@ -12,7 +12,7 @@ import (
 	"strings"
 )
 
-const Version string = c.V + "V β-S-4.3.3"
+const Version string = c.V + "V β-S-4.4.0"
 
 func Startup() {
 	done := false
@@ -21,7 +21,7 @@ func Startup() {
 	done = false
 	/////declaring username
 	userStruct, _ := usr.Current()
-	user = userStruct.Username
+	user := userStruct.Username
 	/////Declaring priority
 	fmt.Println(c.CL + c.B2 + "No shame in needing help. \nBut please fill this out and people will be able to help ASAP!")
 	s.Spacer(2)
