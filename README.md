@@ -1,7 +1,8 @@
 # SSS
 SkilStak Support System is a help desk for SkilStak by [whitman-colm](https://github.com/whitman-colm), [CoderPythonX](https://github.com/tslnc04) and [dfk](https://github.com/donovank) on github.
 
-**There is a FAQ website** S3's FAQ source code can be viewed [here](https://github.com/whitman-colm/sss-faq) and, as of now, the actual site is not up, although Whitman is trying to get sss.skilstak.io
+### There is a FAQ website
+S3's FAQ source code can be viewed [here](https://github.com/whitman-colm/sss-faq) and, as of now, the actual site is not up, although Whitman is trying to get **sss.skilstak.io**
 
 ## The Story so far:
 As of now, S3 will send an email to TAs with priotity, software and discription of the problem and a Unique identifier. S3 is also it's own repo.
@@ -13,10 +14,10 @@ What Is planned to happen next release
 ## What's next:
 There is no way this is complete. But we can improve it in many ways, here's a list:
 * Give a link to the source code here.
-* Make the whole thing more graphicly appealing. **Started with main
+* ~Make the whole thing more graphicly appealing.~ **Started with main
   UI**
 * Make the program feel less "Whitman stiff"
-* ~~FAQ to curb the inevitable influx of tickets with answers for common troubles.~~ **sorta done**
+* ~~FAQ to curb the inevitable influx of tickets with answers for common troubles.~~ **view top**
 * Message to Mr. Rob if there's an urgent ticket.
 * Find a way to prevent "silly" tickets (*cough* donovank *cough*)
 * Find a way to prevent TAs being jerks.
