@@ -19,9 +19,9 @@ func listLangs() {
 	fmt.Println(c.B00 + "javascript, or js")
 	fmt.Println(c.B01 + "golang, or go")
 	fmt.Println(c.B00 + "java")
-	fmt.Println(c.B01 + "HTML")
-	fmt.Println(c.B00 + "Linux, or Unix")
-	fmt.Println(c.B01 + "Linuxpi")
+	fmt.Println(c.B01 + "html")
+	fmt.Println(c.B00 + "linux or unix")
+	fmt.Println(c.B01 + "linuxpi")
 	/*fmt.Println(c.B00+"")
 	fmt.Println(c.B01+"")
 	fmt.Println(c.B00+"")
@@ -31,9 +31,8 @@ func listLangs() {
 }
 
 func Startup() {
-	fmt.Println(c.B3 + "FAQ data module by whitman-colm version" + Version)
-	for true {
-
+	fmt.Println(c.B3 + "FAQ Module By " + c.G + "@whitman-colm " + c.Y + "Version" + Version + c.X)
+	for {
 		fmt.Println(c.G + "Which language does your problem relate to? (you can type \"help\" to see available languages)")
 		u.Spacer(2)
 		mode, _ := i.Input("FAQ", "sss")
