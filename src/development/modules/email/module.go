@@ -12,7 +12,7 @@ import (
 	"strings"
 )
 
-const Version string = c.V + "V β-S-4.4.0"
+const Version string = c.V + "V β-S-4.4.1"
 
 func Startup() {
 	done := false
@@ -22,6 +22,12 @@ func Startup() {
 	/////declaring username
 	userStruct, _ := usr.Current()
 	user := userStruct.Username
+	/////Making sure the username isn't "you@skilstak" to prevent anonymous spammers/trolls.
+	if user == "you" {
+		fmt.Println(c.B2 + "Sorry, please sign in from a valid SkilStak ID")
+		s.Go(1)
+		s.Bye()
+	}
 	/////Declaring priority
 	fmt.Println(c.CL + c.B2 + "No shame in needing help. \nBut please fill this out and people will be able to help ASAP!")
 	s.Spacer(2)
