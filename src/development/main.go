@@ -6,7 +6,7 @@ import (
 	i "development/modules/other"
 	"fmt"
 	c "github.com/skilstak/go/colors"
-	"os"
+	//"os"
 	"strings"
 )
 
@@ -22,9 +22,16 @@ func main() {
 			e.Startup()
 			done = true
 		//case "b":
-		//Setup slack helper lib. STOP SLACKING!
-		case "b":
-			os.Exit(-1)
+		/*
+			fmt.Println(c.CL + c.B1 + "Copy and paste this into your browser")
+			fmt.Println()
+			fmt.Println(c.O+"https://sss.skilstak.io")
+			fmt.Println()
+			fmt.Println()
+			done = true
+		*/
+		case "c":
+			done = true
 		default:
 			fmt.Println(c.B00 + "Sorry, try entering one of the letters in red")
 		}
