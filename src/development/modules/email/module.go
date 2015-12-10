@@ -78,9 +78,9 @@ func nonUrgent(user string, priority string) {
 	fmt.Println(c.CL + c.B2 + "No shame in needing help. \nBut please fill this out and people will be able to help ASAP!")
 	s.Spacer(2)
 	fmt.Println(c.G + "Whats the best way someone can contact you for help on this problem?")
-	fmt.Println(c.R + "{A} " + c.B01 + "e-Mail me at an email address")
+	fmt.Println(c.R + "{A} " + c.B01 + "E-MAIL me at an email address")
 	fmt.Println(c.R + "{B} " + c.B00 + "TALK to me on the skilstak.sh server @ " + user + ".")
-	fmt.Println(c.R + "{C} " + c.B01 + "SLACK me (must provide username)")
+	fmt.Println(c.R + "{C} " + c.B01 + "Message me via SLACK (must provide username)")
 
 	newcontact := ""
 	done = false
