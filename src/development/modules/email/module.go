@@ -12,20 +12,21 @@ import (
 	"strings"
 )
 
-const blockedUsers []string = {
-	"you"
+var blockedUsers = []string{
+	"you",
 }
 
 func stringInSlice(a string, list []string) bool {
 	for _, b := range list {
 		if b == a {
 			return true
-	        }
+		}
 	}
 	return false
 }
 
 const Version string = c.V + "V β-S-4.4.1"
+
 //Version is exported to the UITest module.
 func Startup() {
 	done := false
@@ -34,9 +35,10 @@ func Startup() {
 	/////declaring username
 	userStruct, _ := usr.Current()
 	user := userStruct.Username
+	banned := stringInSlice(user, blockedUsers)
 	/////Preventing baned users, TODO: Update to some sort of time based json file
 	if banned == true {
-		fmt.Println(c.B2 + "Sorry, but you have been banned. Message @whitman-colm on ")
+		fmt.Println(c.B2 + "Sorry, but you have been banned. Message @whitman-colm on slack for more info")
 		s.Go(1)
 		s.Bye()
 	}
