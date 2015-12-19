@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-const Version string = "\033[1;35mV β-S-1.0.1"
+const Version string = "\033[1;35mV S-1.0.0"
 
 func GenerateID() string {
 	t := time.Now()

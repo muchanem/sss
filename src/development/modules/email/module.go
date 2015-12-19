@@ -14,6 +14,7 @@ import (
 
 var blockedUsers = []string{
 	"you",
+	"durza",
 }
 
 func stringInSlice(a string, list []string) bool {
@@ -25,7 +26,7 @@ func stringInSlice(a string, list []string) bool {
 	return false
 }
 
-const Version string = c.V + "V β-S-4.4.1"
+const Version string = c.V + "V S-1.0.0"
 
 //Version is exported to the UITest module.
 func Startup() {
@@ -45,12 +46,13 @@ func Startup() {
 	/////Declaring priority
 	fmt.Println(c.CL + c.B2 + "No shame in needing help. \nBut please fill this out and people will be able to help ASAP!")
 	s.Spacer(2)
-	fmt.Println(c.B1 + "PLEASE be honest, what is the priority of the ticket?")
+	fmt.Println(c.B1 + "What is the priority of the ticket?")
+	fmt.Println(c.B01 + "SkilBux will be taken as a refundable deposit assuming:\nYou have checked the FAQ first\nHonestly prioritize your ticket.")
 	fmt.Println()
-	fmt.Println(c.B01 + "Low")
-	fmt.Println(c.B00 + "Medium")
-	fmt.Println(c.B01 + "High")
-	fmt.Println(c.B00 + "Urgent")
+	fmt.Println(c.G + "Low     " + c.B01 + " | §0")
+	fmt.Println(c.Y + "Medium  " + c.B01 + " | §2")
+	fmt.Println(c.R + "High    " + c.B01 + " | §5")
+	fmt.Println(c.V + "Urgent  " + c.B01 + " | §10")
 	/////
 	for done == false {
 		priority, _ := i.Input("email", "sss")
@@ -151,28 +153,27 @@ func listForums() {
 	fmt.Println(c.CL + c.B2 + "Hmm... here are all the forums:")
 	s.Spacer(1)
 	fmt.Println(c.B01 + "Bux")
-	fmt.Println(c.B00 + "Camp")
+	fmt.Println(c.B1 + "Camp")
 	fmt.Println(c.B01 + "Ehacking")
-	fmt.Println(c.B00 + "FUNdamentals")
+	fmt.Println(c.B1 + "FUNdamentals")
 	fmt.Println(c.B01 + "Game")
-	fmt.Println(c.B00 + "Java")
+	fmt.Println(c.B1 + "Java")
 	fmt.Println(c.B01 + "Js")
-	fmt.Println(c.B00 + "Linux π")
+	fmt.Println(c.B1 + "Linux π")
 	fmt.Println(c.B01 + "Code && play")
-	fmt.Println(c.B00 + "Code && prep")
+	fmt.Println(c.B1 + "Code && prep")
 	fmt.Println(c.B01 + "Python")
-	fmt.Println(c.B00 + "Web")
+	fmt.Println(c.B1 + "Web")
 	fmt.Println(c.B01 + "GOlang")
-	fmt.Println(c.B00 + "Pro")
-	fmt.Println(c.B01 + "S.W.A.T.")
+	fmt.Println(c.B1 + "Linux/Unix")
+	fmt.Println(c.B01 + "Pro")
+	fmt.Println(c.B1 + "S.W.A.T.")
 	s.Go(1)
 }
 func low() {
 	fmt.Println(c.CL + c.B2 + "Ok. To prevent spam on easy items, we ask that you SLACK for help in the SLACK forums.")
 	fmt.Println(c.B1 + "Is that OK?")
 	fmt.Println()
-	fmt.Println(c.R + "no")
-	fmt.Println(c.R + "yes")
 	openBrowser := ""
 	done := false
 	otherDone := false
@@ -188,6 +189,9 @@ func low() {
 				fmt.Println(c.CL + c.B1 + "Copy and paste this into your browser")
 				s.Spacer(1)
 				switch site {
+				case "linux", "unix", "linux/unix":
+					fmt.Println(c.O)
+					fmt.Println("https://skilstak.slack.com/messages/linux/")
 				case "bux":
 					fmt.Println(c.O)
 					fmt.Println("https://skilstak.slack.com/messages/bux/")
