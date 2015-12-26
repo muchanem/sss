@@ -37,7 +37,7 @@ func Startup() {
 	userStruct, _ := usr.Current()
 	user := userStruct.Username
 	banned := stringInSlice(user, blockedUsers)
-	/////Preventing baned users, TODO: Update to some sort of time based json file
+	/////Preventing banned users, TODO: Update to some sort of time based json file
 	if banned == true {
 		fmt.Println(c.B2 + "Sorry, but you have been banned. Message @whitman-colm on slack for more info")
 		s.Go(1)
@@ -118,7 +118,7 @@ func nonUrgent(user string, priority string) {
 			newcontact = "slack me at " + studentemail + "."
 			done = true
 		default:
-			fmt.Println(c.X, "Sorry M8, thats not a valid statment...")
+			fmt.Println(c.X, "Sorry, thats not a valid statment...")
 		}
 	}
 	//	uuid := id.LastLine("listOfUUID.txt")
