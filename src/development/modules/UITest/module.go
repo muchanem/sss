@@ -25,4 +25,5 @@ func Output() {
 	fmt.Println(c.R + "[A]" + c.B + " Get programming help!")
 	fmt.Println(c.R + "[B]" + c.B + " Check the FAQs " + c.B01 + "[Coming soon!]")
 	fmt.Println(c.R + "[C]" + c.B + " Just stoppin' by.")
+	fmt.Pintln(c.Y + "When you know what you need just type the corrosponding letter in the command line")
 }
